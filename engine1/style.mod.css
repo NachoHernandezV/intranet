@@ -53,19 +53,19 @@
 }
 
 div#ws_fullscreen:-moz-full-screen #wowslider-container1 {
-    width: 95% !important;
+    width: 100% !important;
     max-width: 100% !important;
     max-height: inherit;
 }
 
 div#ws_fullscreen:-webkit-full-screen #wowslider-container1 {
-    width: 95% !important;
+    width: 100% !important;
     max-width: 100% !important;
     max-height: inherit;
 }
 
 div#ws_fullscreen:fullscreen #wowslider-container1 {
-    width: 95% !important;
+    width: 100% !important;
     max-width: 100% !important;
     max-height: inherit;
 }

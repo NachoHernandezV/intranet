@@ -1,0 +1,218 @@
+*{ /*el primero es el espacio entre arriba, abajo,izq y der con respoecto a la pantalla
+el segundo es el espacio arriba, abajo,izq y der entre los elementos fronterizos*/
+margin: 0px;
+padding: 0px;
+}
+
+/*para especificar el modelo de caja a todas las secciones y que no aplique el estilo en linea*/
+header,section,footer,aside,nav,article,figure,figcaption,hgroup{
+  display: block;
+}
+
+body{
+  text-align: center;
+  /*background:#323232;/*gris chido #34343D*/
+  background:url("../imagen/background.png");
+}
+
+/*PARA ALINEAR LAS IMAGENES */
+.blog{
+	width: 1200px;
+	margin: 0 auto;/*para centrar*/
+}
+
+.blog-items{
+	display: flex; /*Para poner nuetros elementosen linea*/
+	flex-wrap: wrap; /*si el elemnto ya no tiene especio se pone abajo */
+	/*justify-content: space-around;mismo margenatodos los elemntos de izqy derecha,abajo y arriba*/
+	justify-content: space-between;
+}
+.item-blog{
+	width: 220px;/*para darle el ancho a la caja tanto imagen como textode abajo*/
+}
+.item-blog:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+/*Para AutoAjustar la imagen segun las dimensiones de la pantalla*/
+img {
+    width:100%;
+    max-width:640px;
+}
+
+/*Esta es para el logo de Pirineos*/
+#cabecera img{
+  width:100%;
+  max-width:290px;
+  font: bold 5px verdana, sans-serif;
+}
+#cabecera figcaption{
+  font: bold 10px verdana, sans-serif;
+}
+
+/*Esto es para el header principal*/
+#cabecera{
+  /*background: #FFC04D;*/
+ background:url("../imagen/wheat12.jpg");
+  padding: 40px;
+  border: 1px solid #999999;
+
+}
+.textprincipal{
+   font-size: 62px;
+   color:black;
+}
+
+/*esto es para el div principal*/
+#agrupar{/*Solo ocupa el 90 del body, ancho del contenedor*/
+  width: 80%;
+  margin:2px auto; /*el 15 solo se aplica para arriba y abajo, en los extremos es automatico, es el margen*/
+  text-align: left; /*text-align es hereditaria por lo tanto debemos regresarla a su configuracion normal, esto es por el body*/
+  /*en la linea del body centramos y aqui necesitamos toda a la izquierda*/
+  border:1px solid white;
+  margin:0px auto;
+}
+
+
+/*esto es para el NAV*/
+#menu{
+  /*background:#663300; verde #9ACD32* naranja #FFC151 */
+  display: inline-block;
+  position:absolute;
+  left: 50px;
+  top:20px;
+  background: black;
+
+  /*border: 1px solid #999999;*/
+  /*padding: 5px 10px; margen arriba, abajo 5px y los laterales de 15px */
+}
+#menu li{ /*Para todos los elemntos del NAV */
+  display:inline-block; /*aqui no queremos en caja, para que se pongan en linea*/
+  padding: 10px 30px 10px 30px;
+  text-decoration:none;
+  color: black;
+
+}
+.logotipo{
+  display: inline-block;
+}
+
+
+#menu a{
+  color: white;
+    text-decoration:none;
+      list-style:none;
+}
+#menu li:hover{ /*cuando se pasa por encima el raton, se pone borde y color de relleno*/
+    border-bottom: 3px solid #6e6e6e;
+    background: #e68a00;
+}
+.actualfecha{
+  color:white;
+}
+/*esto es para la seccion PRINCIPAL*/
+#seccion{
+  width:100%; /*pARA QUE ESTE JUNTO CON EL ASIDE TENEMOS QUE DARLE UN ANCHO ESTE ES EL 70% DEL DIV*/
+  /*float: left; /*CONVIERTE EN CAJAS NO SIGUE EL ORDEN EN BLOQUE*/
+  margin:0 auto;
+}
+
+
+#cumpletitulo{
+  font: bold 20px verdana, sans-serif;
+}
+.cumpletitulo{
+  font: bold 37px verdana, sans-serif;
+  color:
+}
+aside img{
+  width:100%;
+  max-width:40px;
+}
+
+/*el footer*/
+
+
+
+#primer_articulo{
+  /*background:#C9E4CA;*/
+  /*border:1px solid #999999;*/
+  /*border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;*/
+  color:white;
+  width: 100%;
+  margin:0px auto;
+}
+.elementos{
+  text-decoration: none;
+  color:white;
+}
+.elementos:hover{
+  text-decoration: none;
+  color:#DAF7A6;
+}
+.elementos_li{
+  padding: 10px 0;
+}
+
+
+article{
+  margin-bottom: 15px;
+  padding:0px;
+  /*background:#F0E68C;*/
+}
+
+.areas{
+    margin: 15px 15px 30px 15px;
+    font: italic 19px verdana, sans-serif;
+    text-align: left;
+}
+
+
+#fecha{
+    margin: 0px;
+    text-align: left;
+    font: italic 15px verdana, sans-serif;
+    padding:15px 0 0 0;
+    border-bottom: 1px solid white;
+}
+article footer{
+  text-align: right;
+}
+
+time{
+  color:#999999;
+}
+
+figcaption{
+  font: italic 14px verdana, sans-serif;
+}
+
+h1{
+  font: bold 20px verdana, sans-serif;
+}
+h2{
+  font: bold 14px verdana, sans-serif;
+}
+
+.coloramarillo{
+  color:#F0E68C;
+  font: bold 25px verdana, sans-serif;
+}
+
+#pie{
+  clear:both;/*importantisimo esta linea restaura el flujo normal del documanto, repara lo que hizo float
+  no queremos que sigua en modo caja pues soloqueremos seccion y columna juntas*/
+  background: #CCCCCC;
+  text-align: center;
+  padding: 7px;
+  border: 2px solid #999999;
+  /*position: relative;
+  bottom: 0;
+  width: 99%;*/
+
+}
